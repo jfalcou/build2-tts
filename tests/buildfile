@@ -11,5 +11,5 @@ for cpp_file : unit_tests/cxx{*} unit_tests/infos/cxx{*}
 for folder : unit_tests/dir{* -infos}
 {
 	exe_name = $directory($folder)
-	./ : exe{"tts_$exe_name"} : $exe_name/cxx{*} $deps
+	./ : exe{"tts_$exe_name"} : $exe_name/{hxx cxx}{*} $deps
 }
