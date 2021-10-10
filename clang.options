@@ -1,0 +1,4 @@
+@clang
+cxx
+config.cxx = clang++
+config.cxx.poptions = -O0 -g -Wall -Werror

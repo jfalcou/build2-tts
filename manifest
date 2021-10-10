@@ -1,0 +1,12 @@
+: 1
+name: libtts
+version: 0.1.0-a.0.z
+summary: tts C++ library
+license: other: proprietary ; Not free/open source.
+description-file: README.md
+url: https://example.org/libtts
+email: joel.falcou@lri.fr
+#build-error-email: joel.falcou@lri.fr
+depends: * build2 >= 0.13.0
+depends: * bpkg >= 0.13.0
+#depends: libhello ^1.0.0

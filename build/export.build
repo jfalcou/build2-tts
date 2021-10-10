@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libtts/
+}
+
+export $out_root/libtts/$import.target

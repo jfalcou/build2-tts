@@ -1,0 +1,3 @@
+import libs = libtts%lib{tts}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}

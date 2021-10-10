@@ -1,0 +1,4 @@
+@gcc
+cxx
+config.cxx = g++
+config.cxx.poptions = -O0 -g -Wall -Werror
