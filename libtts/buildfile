@@ -18,8 +18,12 @@ lib{tts}:
 # Install into the libtts/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
 #
-{hxx ixx txx}{*}:
+include/
 {
-  install         = include/libtts/
-  install.subdirs = true
+  {hxx ixx txx}{*}:
+  {
+    install         = include/
+    install.subdirs = true
+  }
 }
+
