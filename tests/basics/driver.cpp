@@ -1,35 +1,15 @@
-#include <sstream>
-#include <stdexcept>
+//==================================================================================================
+/**
+  TTS - Tiny Test System
+  Copyright : TTS Contributors & Maintainers
+  SPDX-License-Identifier: MIT
+**/
+//==================================================================================================
+#define TTS_MAIN
+#include <tts/tts.hpp>
 
-#include <libtts/version.hpp>
-#include <libtts/tts.hpp>
-
-#undef NDEBUG
-#include <cassert>
-
-int main ()
+TTS_CASE( "Check that forced broken expectation fails" )
 {
-  using namespace std;
-  using namespace tts;
-
-  // Basics.
-  //
-  {
-    ostringstream o;
-    say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
-  }
-
-  // Empty name.
-  //
-  try
-  {
-    ostringstream o;
-    say_hello (o, "");
-    assert (false);
-  }
-  catch (const invalid_argument& e)
-  {
-    assert (e.what () == string ("empty name"));
-  }
-}
+  TTS_EXPECT(true);
+  TTS_EXPECT_NOT(false);
+};
