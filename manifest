@@ -1,12 +1,16 @@
 : 1
 name: libtts
-version: 0.1.0-a.0.z
-summary: tts C++ library
-license: other: proprietary ; Not free/open source.
-description-file: README.md
-url: https://example.org/libtts
+version: 1.0.0
+summary: Tiny Test System C++ library
+license: MIT
+description-file: upstream/README.md
+url: https://jfalcou.github.io/tts/
+doc-url: https://jfalcou.github.io/tts/
+src-url: https://github.com/jfalcou/tts
+package-url: https://github.com/jfalcou/build2-tts
 email: joel.falcou@lri.fr
-#build-error-email: joel.falcou@lri.fr
+build-error-email: joel.falcou@lri.fr
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
-#depends: libhello ^1.0.0
+requires: c++20 c++23
+builds: default experimental ; Only modern compilers are supported.
