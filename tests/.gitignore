@@ -1,6 +1,6 @@
 # Test executables.
 #
-driver
+tts_*
 
 # Testscript output directories (can be symlinks).
 #

@@ -1,1 +1,15 @@
-./: {*/ -build/}
+import deps = libtts%lib{tts}
+
+## Build standalone files
+for cpp_file : unit_tests/cxx{*} unit_tests/infos/cxx{*}
+{
+	exe_name = $name($cpp_file)
+	./ : exe{"tts_$exe_name"} : $cpp_file $deps
+}
+
+## Build agregated files
+for folder : unit_tests/dir{* -infos}
+{
+	exe_name = $directory($folder)
+	./ : exe{"tts_$exe_name"} : $exe_name/cxx{*} $deps
+}
