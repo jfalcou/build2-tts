@@ -12,5 +12,13 @@ email: joel.falcou@lri.fr
 build-error-email: joel.falcou@lri.fr
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
-requires: c++20 c++23
-builds: default experimental ; Only modern compilers are supported.
+
+requires: c++20 | c++23
+# MSVC >= 16.10
+# gcc >= 11
+# clang excluded from mac
+
+builds: all : &( +msvc-16.10+ +gcc-11+ +clang-12+ )
+build-exclude: macos*-clang**
+build-exclude: **emcc**
+build-exclude: **libc++**
